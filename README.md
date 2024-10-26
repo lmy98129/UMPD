@@ -11,11 +11,8 @@ Official Code of ACM MM'24 Paper "Unsupervised Multi-view Pedestrian Detection"
 We propose a novel approach via Unsupervised Multi-view Pedestrian Detection (UMPD) to eliminate the high dependency of the current mainstream supervised multi-view pedestrian detection methods on the laborious manual labels: 
 
 * Firstly, Semantic-aware Iterative Segmentation (SIS) method is proposed to extract the PCA values of DINOv2 representations, and segment them into 2D masks as pseudo labels. To identify the pedestrians, iterative PCA is adopted with zero-shot semantic classes of vision-language model CLIP. 
-	
 * Secondly, we propose Geometric-aware Volume-based Detector (GVD) to encode multi-view 2D images into a 3D volume via geometry, and learn to predict 3D density and color from this volume via rendering losses with SIS pseudo labels. 
-	
 * Thirdly, Vertical-aware BEV Regularization (VBR) method is further proposed to constrain the predicted 3D density to be vertical on BEV, following the natural pedestrian poses.  
-	
 * Finally, formed by these key components, our proposed UMPD, as **the 1<sup>st</sup> fully-unsupervised method in this field to our best knowledge**, performs competitively on popular Wildtrack, Terrace, and MultiviewX datasets, especially compared with the previous supervised methods.
 
 ![docs/results.png](docs/results.png)
@@ -120,20 +117,20 @@ If you find our research helpful or make further research, please consider citin
 
 ```
 @inproceedings{10.1145/3664647.3681560,
-author = {Liu, Mengyin and Zhu, Chao and Ren, Shiqi and Yin, Xu-Cheng},
-title = {Unsupervised Multi-view Pedestrian Detection},
-year = {2024},
-isbn = {9798400706868},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3664647.3681560},
-doi = {10.1145/3664647.3681560},
-booktitle = {Proceedings of the 32nd ACM International Conference on Multimedia},
-pages = {1034–1042},
-numpages = {9},
-keywords = {multi-view pedestrian detection, unsupervised learning},
-location = {Melbourne VIC, Australia},
-series = {MM '24}
+    author = {Liu, Mengyin and Zhu, Chao and Ren, Shiqi and Yin, Xu-Cheng},
+    title = {Unsupervised Multi-view Pedestrian Detection},
+    year = {2024},
+    isbn = {9798400706868},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    url = {https://doi.org/10.1145/3664647.3681560},
+    doi = {10.1145/3664647.3681560},
+    booktitle = {Proceedings of the 32nd ACM International Conference on Multimedia},
+    pages = {1034–1042},
+    numpages = {9},
+    keywords = {multi-view pedestrian detection, unsupervised learning},
+    location = {Melbourne VIC, Australia},
+    series = {MM '24}
 }
 ```
 
