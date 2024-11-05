@@ -6,23 +6,14 @@ class Config:
         # seed
         self.seed = 1337
         # [Wildtrack, MultiviewX, Terrace]
-        self.dataset = 'Terrace'
+        self.dataset = 'Wildtrack'
 
         # Paths
-        # self.dino_path = '/path/to/dinov2'
-        # self.clip_path = '/path/to/CLIP/RN50.pt'
+        self.dino_path = '/path/to/dinov2'
+        self.clip_path = '/path/to/CLIP/RN50.pt'
 
-        # self.pseudo_mask_path = os.path.join('tmp', f'{self.dataset}Mask')
-        # self.data_path = os.path.join('/path/to/all/datasets/', self.dataset)
-
-        # Example
-        self.dino_path = '/home/prir1005/.cache/torch/hub/facebookresearch_dinov2_main'
-        self.clip_path = '/home/prir1005/blean/torch-checkpoints/RN50.pt'
-
-        subfixes = { 'Wildtrack': 'Mask', 'MultiviewX': 'MaskFull', 'Terrace': 'MaskHigh' }
-        self.pseudo_mask_path = os.path.join('tmp', f'{self.dataset}{subfixes[self.dataset]}')
-        
-        self.data_path = os.path.join('/home/prir1005/pubdata/', self.dataset)
+        self.pseudo_mask_path = os.path.join('tmp', f'{self.dataset}Mask')
+        self.data_path = os.path.join('/path/to/all/datasets/', self.dataset)
         
         # DINOv2, CLIP, ResNet18
         self.dino_dim = 768
